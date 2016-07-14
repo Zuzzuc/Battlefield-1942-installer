@@ -1,4 +1,5 @@
 #!/bin/bash
+# License: The MIT License (MIT)
 # Author Zuzzuc https://github.com/Zuzzuc
 function Error_Catcher {
 ExitStatus=$?
