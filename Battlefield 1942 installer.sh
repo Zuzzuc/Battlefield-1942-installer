@@ -1,6 +1,5 @@
 #!/bin/bash
-# Made by Zuzzuc
-#
+# Author Zuzzuc https://github.com/Zuzzuc
 function Error_Catcher {
 ExitStatus=$?
 if [ "$ExitStatus" != "0" ]; then
