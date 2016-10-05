@@ -28,8 +28,8 @@ else
 	read InstallWine
 	if [ "$InstallWine" == "y" ];then
 		echo -e 'Installing Wine\n'
-		curl -o $wd/Winefiles.zip -C - http://zuzzuc.com/files/Wine.app.zip
-		unzip -o $wd/Winefiles.zip -d /Applications
+		curl -o $wd/Wine.zip -C - http://zuzzuc.com/files/Wine.app.zip
+		unzip -o $wd/Wine.zip -d /Applications
 		rm -rf $wd/Wine.zip
 		rm -rf /Applications/__MACOSX
 		echo -e '\nWine has been installed to /Applications/Wine.app\n\n\n'
