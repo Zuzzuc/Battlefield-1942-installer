@@ -39,7 +39,7 @@ else
 	fi
 fi
 echo -e '\n\n'
-echo -e 'This is an installer for battlefield 1942.\nThis installer will require 3GB of free disc space.\nChanges will be made to the following files: "/Applications/Battlefield\ Launcher.command", "~/Documents/Battlefield\ 1942.iso" and "~/Wine\ Files".'
+echo -e 'This is an installer for Battlefield 1942.\nThis installer will require 3GB of free disc space.\nChanges will be made to the following files: "/Applications/Battlefield\ Launcher.command", "~/Documents/Battlefield\ 1942.iso" and "~/Wine\ Files".'
 sleep 5
 echo -e "\n"
 echo -e "Installing pre built wine files\n"
@@ -49,7 +49,7 @@ echo -e "\n"
 unzip -o $wd/Winefiles.zip -d ~/
 rm -rf ~/__MACOSX
 echo -e "\n"
-echo -e "Installing battlefield slim iso\n"
+echo -e "Installing battlefield iso\n"
 curl -o ~/Documents/Battlefield\ 1942.iso -C - https://www.zuzzuc.com/files/bf1942/bf1942.iso
 Get_E
 echo -e "\n"
