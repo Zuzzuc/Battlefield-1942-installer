@@ -48,12 +48,12 @@ if [ ! -f $wd/WFD ];then
 	curl -o $wd/Winefiles.zip -C - https://www.zuzzuc.com/files/bf1942/WinefilesBF1942.zip
 	Get_E
 	touch $wd/WFD
+	echo -e "\n"
+	unzip -o $wd/Winefiles.zip -d ~/
+	rm -rf ~/__MACOSX
 else
 	echo "Pre built wine files already downloaded, skipping"
 fi
-echo -e "\n"
-unzip -o $wd/Winefiles.zip -d ~/
-rm -rf ~/__MACOSX
 echo -e "\n"
 echo -e "Installing battlefield iso\n"
 if [ ! -f $wd/DD ];then
