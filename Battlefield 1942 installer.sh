@@ -52,7 +52,7 @@ if [ ! -f $wd/WFD ];then
 	unzip -o $wd/Winefiles.zip -d ~/
 	rm -rf ~/__MACOSX
 else
-	echo "Pre built wine files already downloaded, skipping"
+	echo -e "\nPre built wine files already downloaded, skipping"
 fi
 echo -e "\n"
 echo -e "Installing battlefield iso\n"
