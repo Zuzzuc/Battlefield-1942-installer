@@ -32,7 +32,11 @@ else
 	read InstallWine
 	if [ "$InstallWine" == "y" ];then
 		echo -e 'Installing Wine\n'
-		curl -o $wd/Wine.zip -C - https://zuzzuc.com/files/Wine.app.zip
+		if [ ! -f $wd/WD ];then
+			curl -o $wd/Wine.zip -C - https://zuzzuc.com/files/Wine.app.zip
+			Get_E
+			touch $wd/WD
+		fi
 		unzip -o $wd/Wine.zip -d /Applications
 		rm -rf /Applications/__MACOSX
 		echo -e '\nWine has been installed to /Applications/Wine.app\n\n\n'
@@ -43,15 +47,21 @@ echo -e 'This is an installer for Battlefield 1942.\nThis installer will require
 sleep 5
 echo -e "\n"
 echo -e "Installing pre built wine files\n"
-curl -o $wd/Winefiles.zip -C - https://www.zuzzuc.com/files/bf1942/WinefilesBF1942.zip
-Get_E
+if [ ! -f $wd/WFD ];then
+	curl -o $wd/Winefiles.zip -C - https://www.zuzzuc.com/files/bf1942/WinefilesBF1942.zip
+	Get_E
+	touch $wd/WFD
+fi
 echo -e "\n"
 unzip -o $wd/Winefiles.zip -d ~/
 rm -rf ~/__MACOSX
 echo -e "\n"
 echo -e "Installing battlefield iso\n"
-curl -o ~/Documents/Battlefield\ 1942.iso -C - https://www.zuzzuc.com/files/bf1942/bf1942.iso
-Get_E
+if [ ! -f $wd/DD ];then
+	curl -o ~/Documents/Battlefield\ 1942.iso -C - https://www.zuzzuc.com/files/bf1942/bf1942.iso
+	Get_E
+	touch $wd/DD
+fi
 echo -e "\n"
 echo -e "Installing Battlefield launcher\n"
 curl https://zuzzuc.com/files/bf1942/BattlefieldLauncher.sh > /Applications/Battlefield\ Launcher.command
