@@ -10,4 +10,4 @@ Alternativly copy the following into your terminal to download and execute the d
 <br><br>
 
 # Compability
-I've tested this on Yosemite and El Capitan.
+I've tested this on Yosemite and El Capitan, but it should work on any version of macOS.
