@@ -44,7 +44,7 @@ else
 			echo "Wine will not be installed. Battlefield will not be able to run without it."
 			WineSet=0
 		else
-			echo -ne "\n\$InstallWine must be 'y' or 'n'. You entered $InstallWine. Try again\n\n"
+			echo -ne "\n\$InstallWine must be 'y' or 'n'. Try again\n\n"
 		fi
 	done
 fi
