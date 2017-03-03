@@ -27,17 +27,26 @@ if [ "$WI" == "true" ] ; then
 	echo "WARNING"
 	sleep 5
 else 
-	echo 'Wine does not appear to be properly installed.'
-	echo -e 'Would you like to download and install it now? Type:[y]es or [n]o\n'
-	read InstallWine
-	if [ "$InstallWine" == "y" ];then
-		echo -e 'Installing Wine\n'
-		curl -o $wd/Wine.zip -C - https://zuzzuc.com/files/Wine.app.zip
-		Get_E
-		unzip -o $wd/Wine.zip -d /Applications
-		rm -rf /Applications/__MACOSX
-		echo -e '\nWine has been installed to /Applications/Wine.app\n\n\n'
-	fi
+	WineSet=1
+	while [ "$WineSet" == "1" ];do
+		echo 'Wine does not appear to be properly installed.'
+		echo -e 'Would you like to download and install it now? Type:[y]es or [n]o\n'
+		read InstallWine
+		if [ "$InstallWine" == "y" ] || [ "$InstallWine" == "Y" ];then
+			echo -e 'Installing Wine\n'
+			curl -o $wd/Wine.zip -C - https://zuzzuc.com/files/Wine.app.zip
+			Get_E
+			unzip -o $wd/Wine.zip -d /Applications
+			rm -rf /Applications/__MACOSX
+			echo -e '\nWine has been installed to /Applications/Wine.app\n\n\n'
+			WineSet=0
+		elif [ "$InstallWine" == "n" ] || [ "$InstallWine" == "N" ];then
+			echo "Wine will not be installed. Battlefield will not be able to run without it."
+			WineSet=0
+		else
+			echo "\$InstallWine must be 'y' or 'n'. You entered $InstallWile. Try again"
+		fi
+	done
 fi
 echo -e '\n\n'
 echo -e 'This is an installer for Battlefield 1942.\nThis installer will require 3GB of free disc space.\nChanges will be made to the following files: "/Applications/Battlefield\ Launcher.command", "~/Documents/Battlefield\ 1942.iso" and "~/Wine\ Files".'
