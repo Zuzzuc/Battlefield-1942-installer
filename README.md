@@ -1,5 +1,5 @@
 # Currently not working
-## Will be fixed later this week
+## Will be fixed TODAY (Friday)
 
 
 # Battlefield-1942-installer
