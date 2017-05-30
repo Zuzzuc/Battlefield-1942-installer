@@ -1,7 +1,3 @@
-# Currently not working
-## Will be fixed very soon
-
-
 # Battlefield-1942-installer
 
 This script will install Battlefield 1942 and its DLC's (Secret weapons and Road to Rome) as well as wine, if it's not already installed, on Mac OS X.
