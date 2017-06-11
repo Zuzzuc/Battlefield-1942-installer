@@ -40,6 +40,7 @@ else
 			rm -rf /Applications/__MACOSX
 			echo -e '\nWine has been installed to /Applications/Wine.app\n\n\n'
 			WineSet=0
+			chmod u+x /Applications/Wine.app
 		elif [ "$InstallWine" == "n" ] || [ "$InstallWine" == "N" ];then
 			echo "Wine will not be installed. Battlefield will not be able to run without it."
 			WineSet=0
