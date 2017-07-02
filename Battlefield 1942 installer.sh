@@ -18,6 +18,7 @@ b64gzimport "H4sIAG3wVlkCA7VX62/bNhD/LP0VV1mpH51sJ2m7La6Gpo9hBdqhaLMvS4JCoeiYiEw
 
 # Print information about what the script does.
 echo -e "\nThis is a installer for Battlefield 1942 and its two DLC's.\nThis installer will require about 3GB of free disc space to function.\n\nNote that this script will overwrite your winefiles. Do a backup of them now if you have anything of importance there.\n"
+sleep 3
 
 # Pre install setup
 workdir="/tmp/bf1942installer"
