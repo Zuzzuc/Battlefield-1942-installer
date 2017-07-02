@@ -17,8 +17,7 @@ b64gzimport(){
 b64gzimport "H4sIAG3wVlkCA7VX62/bNhD/LP0VV1mpH51sJ2m7La6Gpo9hBdqhaLMvS4JCoeiYiEwKJJUs9fy/7/jQw068ousaIIbEu/vxHr87Ui8yxQbDVdiDt4xQrugRnCwovHtzUi/AAF+GqHBc6YWQ8Gf1+XNFYKF1qY4mk0umF9XFmIjlxEnCMKR/MX1jUIMevMZnBRnPgZKFULCkSmWXdGxkb3hZaWAK4n2rER/8ADcLKqlZwGWNnhgsICJHP6bJwZOnQ69Zyz0eaAE5U2WR3SK02Qqi+CDCR2Mf74frMDSufNSZrlQaTaMQQ3opCiFVWLDLhb4oKpr2z6aHh6f7s8PHy37IBTFyvzjFFTR5RedZVWi4ztCQCD5nl2kUhXlxkck00rKikVnW9bNCSRrNs0JZgcHzEgT7DWMpKDCTh5DN4RSdHkXwIIUogvMZxseDMJhj1hkqofB5NMtFYP7CICAZVieKWYQyuxDF02gYAv6hEH1gvKL+dTZzDwlJR38niXd8ZLURjaRRvGK9UbqO4OFDsK9kcnY26b7v4X+vNzp9cHqkyozQo/Pz9TryCN77FTmKVz2yTh6jZYpxjMn8so7Fq9a6xGnEq6nfaVPLlu4GosMIopfWX5gzzFYpGEdKYcH1AkmgiGSlHtd+BBQz3UD4nQaSZjkkEvSyJHDwyySn1xNeFQU8c350l2aePUY3Glof+70X2CfgvfgVvehvOxvUXEC4NoKuL7viWTKlGDcvUmkoGMelTF61KHNWPzZPXeAdsLmgCrjQQLFfbrBLASvRpKlBcsQIgoQLZCpSg4tPubjhhcjyT8jpmiGBZ7hn8paxcrZqmRXF/eauDxzz7+xsyOq2rmnbENO20v2b2v6szbCxWhvbZfcaNYz3WfsZs/YHv+LoMmTyslpSrqEfs37HEJVVRsIgF5yGmLi6UwcEo6USpsPNlg2Dt1nFyeIdTq00esNNSaPQlmxDgrOI51khjNTA9uCDoakjUr2Je9vewAqTeUdeS9zsS3AwnHEDZ5hFPC2kWII3OOM4GwMlKkloixI6YjXZebzFKUOnuah4jjwyFKKF97INy/V0J7R7fF5N9yaj9cT01MZ4+KLzuR++xpmtCLYxt0P5CUP5XTRoJppuJC7/5ohzk70eZ7bx32d6cfr8fO2qMEV/zVBs5W8F2RS7yR2EwQ4YN/Y2bZscbNg04gTDrhfNADommgm+ZVoH+yMGeyIEzhF+C622Mhmbs2A7N09R3WiByyaOQoVNmBkTc8yaqhMhJSW6uMWsyWWmNW05YKA80hNDGMk0w9YwiWTZRTvhxnB8ISQiX9Z8P5EZV3NsIVMPFZqDbjBg6XTGnqXxYLCVt2R/OJyxR4/wNxd1bhsFdr7dJE0mOzqTs73RxFegEOhlN3tNy+H8cCp2XnU0WoLWrkvD0XjVXCHWFjVe+cvD2lENDyvnhqknw5qF9RBvQDcRLcq/2GL+8Hd5lTMJSVkH6TRMI1glUkLyYb6dgdGeSUC0iQmGDcUXEibpUmj6v2fMwX5zyhzMt+asHbt6R0Bew56HO1RqHXPo7VIJSCULSMSdSiQvIbm/ZkkvbK8V/xEkrK8UQVscbgeuE7XYDlp9PboDb4C+d76+NVXfLUtfSJD9rYH8/DzoXEfMCLAjGMksqZbs2pPbHIVjeM0Jnl8av5ZyP5PhJlN4d7nbvX0390P7kdDt8c5Bwurza+M4sV32nkqzgekxUVJpnVKAjllvukHj14GP0ay9YjKtD+Zm0Wx3Tc3G6Ua+fN3uqnmUzcUGkl7jmLw/Gh9zfdTZUF4vS30LJSbHnf6AWVMFnm8xG8PHK1aW9nQyhva2F37F/cZ9abYfmbtvR/5KCI0plreSfMMYPViH/wDy3eFzng8AAA=="
 
 # Print information about what the script does.
-echo -e "\nThis is a installer for Battlefield 1942 and its two DLC's.\nThis installer will require about 3GB of free disc space to function.\n\nNote that this script will overwrite your winefiles. Do a backup of them now if you have anything of importance there.\n"
-sleep 3
+echo -e "\nThis is a installer for Battlefield 1942 and its two DLC's.\nThis installer will require about 3GB of free disc space to function.\n\n"
 
 # Pre install setup
 workdir="/tmp/bf1942installer"
@@ -38,6 +37,9 @@ if [ ! -d "/Applications/Wine.app" ];then
 		
 		Basi
 	fi
+echo 
+	echo -e "Note that this script will overwrite your winefiles. Do a backup of them now if you have anything of importance there."
+	sleep 3
 fi
 
 
