@@ -42,7 +42,6 @@ echo
 	sleep 3
 fi
 
-
 # Prepare basi execution
 BasiPath=(
 	"remote%http://www.zuzzuc.com/files/bf1942/WineFilesBF1942.tar.gz"
@@ -59,7 +58,6 @@ BasiFileAction=(
 	''
 	'chmod u+x "$BasiActiveFile"'
 )
-
 
 # Start installation
 Basi
