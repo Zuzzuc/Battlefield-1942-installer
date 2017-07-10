@@ -64,4 +64,4 @@ Basi
 
 # Post Operations
 echo -e "\n\n\nBattlefield 1942 has been installed on your system.\nTo launch the game, go to you applications and open \"Battlefield Launcher.command\""
-rm -rf "$workdir" 
+rm -rf "$workdir"
